@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remote Work Cafes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>☕ Cafes for Remote Work</h1>
+
+    <div class="container">
+        {% for cafe in cafes %}
+        <div class="card">
+            <h2>{{ cafe.name }}</h2>
+            <p>📍 {{ cafe.location }}</p>
+            <p>📶 WiFi: {{ cafe.wifi }}</p>
+            <p>🔌 Power: {{ cafe.power }}</p>
+            <p>⭐ Rating: {{ cafe.rating }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
